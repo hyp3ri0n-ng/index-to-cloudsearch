@@ -1,9 +1,9 @@
 # index-to-cloudsearch
 Index to cloudsearch via the rest api
 
-I've never really found any easily documented uses of the CloudSearch API. I had this script laying around and realized it might be illustrative of the REST API, which I always found a bit confusing with boto wrappers and such. Anyway, this script is the horrible code I just whipped up to builk upload to AWS CloudSearch. Anyway, it just makes a list, then jsonifies the objects to use a pure `requests` based solution
+I've never really found any easily documented uses of the CloudSearch API. I had this script laying around and realized it might be illustrative of the REST API, which I always found a bit confusing with boto wrappers and such. This script is the horrible code I just whipped up to builk upload to AWS CloudSearch using just the REST API. Anyway, it just makes a list, then jsonifies the objects to use a pure `requests`-based solution. I guess it'd be nice if I linked him up [](https://requests.readthedocs.io/en/master/
 
-Anyway the script is simple, it just adds  `concurrent_docs_to_index = 3000` to a list and uses the AWS CloudSearch rest API to bulk upload them, YMMV depending on your docs and stuff. Also note: I had to add my IP address in the Allow Config).
+Anyway the script is simple, it just adds  `concurrent_docs_to_index = 3000` to a list and uses the AWS CloudSearch rest API to bulk upload them, YMMV depending on your docs, how big they are and such. Also note: I had to add my IP address in the Allow Config and that takes 10 minutes to update for some reason. I recommend not sitting there waiting if "it's done yet" and refreshing the page, but instead go grab yourself a water or a beer or something and relax somewhere.
 
 Also, yup, it's where https://scylla.sh data lives believe it or not. Feel free to query it directly :).
 
