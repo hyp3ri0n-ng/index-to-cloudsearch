@@ -1,5 +1,5 @@
 # index-to-cloudsearch
-Index to cloudsearch in bulks of 3000 via the rest api `usage python index_cs.py file`. Inly tested on windows, don't see why  it would;t under the hood, check it out, it's sloppy af.
+Index to cloudsearch 2013 (don't worry it's just when they started support of it this post is from 2020) in bulks of 3000 via the rest api `usage python index_cs.py file`. Only tested on Ubuntu something.something, don't see whyit wouldn't be cross platform iirc.
 
 Anyway I've never really found any easily documented uses of the CloudSearch API. I had this script laying around and realized it might be illustrative of the REST API, which I always found a bit confusing because either (a) was completely undocumented or (b) I had to use boto as a wrappe which was always broken. This script is the horrible code I just whipped up to builk upload to AWS CloudSearch using just the REST API. Anyway, it just makes a list, then jsonifies the objects to use a pure `requests`-based solution. I guess it'd be nice if I linked him up [linked him up](https://requests.readthedocs.io/en/master/) but isn't it part of stdlib in python3? I dunno, whatever man.Then it indexes to your AWS cloudsearch index. Then repeat until you're done. Of course look through the script and put your endpoint instead of mine please.
 
